@@ -189,7 +189,7 @@
 		var builder = new BlobBuilder();
 		if (blobParts) {
 			for (var i = 0, len = blobParts.length; i < len; i++) {
-				if (Uint8Array && blobParts[i] instanceof Uint8Array) {
+				if ((typeof Uint8Array !== "undefined")  && blobParts[i] instanceof Uint8Array) {
 					builder.append(blobParts[i].buffer);
 				}
 				else {
